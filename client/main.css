@@ -1,0 +1,282 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #eee;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  background-attachment: fixed;
+  font-size: 14px;
+}
+
+button {
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  color: white;
+  box-shadow: 0 3px 3px rgba(34, 25, 25, 0.4);
+  padding: 5px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 500px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 425px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  input[type="text"] {
+    min-width: 60%;
+  }
+}
+
+.app-header {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: auto;
+  background: white;
+}
+
+.main::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: inherit;
+}
+
+header {
+  background: #f5bc21;
+  padding: 20px 15px 15px 15px;
+  position: relative;
+  box-shadow: 0 3px 3px rgba(34, 25, 25, 0.4);
+}
+
+.app-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-bar h1 {
+  font-size: 1.7em;
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: bold;
+  margin: 0;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.task-form {
+  display: flex;
+  margin: 30px;
+  text-align: center;
+}
+
+.task-form > input:focus {
+  outline: 0;
+}
+
+.task-form > button {
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #1a95a0e3;
+  padding-top: 8px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 5px;
+}
+
+.task-form > button:hover {
+  background-color: #778d8f70;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding-left: 20px;
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #1a95a0;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+.tasks {
+  list-style-type: none;
+  padding-inline-start: 0;
+  padding: 20px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 20px;
+  color: #00204a;
+}
+
+.tasks > li {
+  display: flex;
+  padding: 16px;
+  border-bottom: #eee solid 1px;
+}
+
+.tasks > li > span {
+  flex-grow: 1;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.tasks > li > button {
+  justify-self: flex-end;
+  color: #282846da;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.tasks > li > button:hover {
+  color: #ff3046;
+}
+
+input[type="checkbox"] {
+  margin: 5px;
+}
+
+input:checked + span {
+  text-decoration: line-through;
+  text-decoration-color: #ff3046;
+}
+
+/* -------------  filter ------------- */
+.filter {
+  display: flex;
+  justify-content: center;
+}
+
+.filter > button {
+  background-color: #19808ade;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.filter > button:hover {
+  color: #00204a;
+  background-color: #778d8f70;
+}
+
+/* -------------  login form ------------- */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form > div {
+  margin: 8px;
+}
+
+.login-form > div > label {
+  font-weight: bold;
+  color: #00204ada;
+}
+
+.login-form > div > input {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 10px 6px;
+  background: transparent;
+  border: 1px solid #aaa;
+  text-align: center;
+  width: 100%;
+  font-size: 1em;
+  margin-right: 16px;
+  margin-top: 4px;
+  height: 60px;
+  top: 10px;
+  font-weight: 200;
+}
+
+.login-form > div > input:focus {
+  outline: 0;
+  box-shadow: inset 0 -3px 0 0 #1a95a0;
+}
+
+.login-form > div > button {
+  background-color: #1a95a0e3;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.login-form > div > button:hover {
+  background-color: #778d8f70;
+}
+
+/* ---------------- style your user name ---------------------*/
+.user {
+  display: flex;
+  color: #7a8ba1b7;
+  align-self: flex-end;
+  margin: 8px 16px 0;
+  font-weight: bold;
+}
+
+.MuiSvgIcon-root {
+  font-size: 1.2rem;
+}
+
+/* ---------------- style loading ---------------------*/
+.loading {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
